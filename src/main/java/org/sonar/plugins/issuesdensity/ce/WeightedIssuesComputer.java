@@ -75,6 +75,8 @@ public class WeightedIssuesComputer implements MeasureComputer {
   @Override
   public void compute(MeasureComputerContext context) {
     int weight = 0;
+    // TODO
+    // TODO
     Map<String, Integer> weightsBySeverity = getOrInitWeightsBySeverity();
 
     for (String severity : ALL) {
