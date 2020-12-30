@@ -34,6 +34,13 @@ public class IssuesDensityPlugin extends SonarPlugin {
 
   @Override
   public List getExtensions() {
+    java.util.regex.Pattern.compile("(a+)+").matcher(
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+
+    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+
+    "aaaaaaaaaaaaaaa!").matches(); // Sensitive
+    
+    
     return ImmutableList.of(
       IssuesDensityMetrics.class,
       HotspotMostViolatedComponentsWidget.class,
